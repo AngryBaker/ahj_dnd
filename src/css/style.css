@@ -1,0 +1,118 @@
+body {
+    background: #2963df;
+    color: #999;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body.grab {
+    cursor: grabbing;
+}
+
+.container {
+    display: flex;
+    column-gap: 10px;
+    width: 900px;
+    margin: 0 auto;
+    background: #2963df;
+}
+
+.column {
+    width: 30%;
+    height: fit-content;
+    background: #dad7d7;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.column-header {
+    margin: 0;
+    color: rgb(94, 87, 87);
+}
+
+.cards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card {
+    position: relative;
+    padding: 2px;
+    width: 266px;
+    margin-bottom: 5px;
+    background: #f6f3f3;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #b2afaf;
+}
+
+.add-card {
+    cursor: pointer;
+}
+
+  
+.new-card-input {
+    width: 98%;
+    height: 60px;
+    border: none;
+    resize: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+  
+.add-card-btn {
+    background: #5aac44;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+  
+.add-card-btn:hover {
+    background: #519839;
+}
+  
+.cancel-card-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+  
+.cancel-card-btn:hover {
+    color: #333;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 96%;
+    cursor: pointer;
+    background-color: rgb(167, 156, 156);
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.card:hover > .close {
+    display: block;
+}
+
+.card.dragged {
+    position: absolute;
+    z-index: 999;
+    cursor: grabbing;
+    pointer-events: none;
+    transform: rotate(5deg);
+    opacity: 0.7;
+}
+
+.placeholder {
+    background: rgba(63, 61, 61, 0.1);
+    border-radius: 5px;
+    margin: 5px 0;
+}
